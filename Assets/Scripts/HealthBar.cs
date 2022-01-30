@@ -19,7 +19,13 @@ public class HealthBar : MonoBehaviour
         // player = FindObjectOfType<Player>();
         // UpdateCounter(player.Health, player.MaxHealth);
     }
-    
+
+    public void Disable()
+    {
+        _bar.enabled = false;
+        healthCounter.enabled = false;
+    }
+
     public void UpdateCounter(int currentHp, int maxHp)
     {
         healthCounter.text = currentHp.ToString();

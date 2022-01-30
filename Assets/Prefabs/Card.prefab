@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1290280717876861067}
   - component: {fileID: 1290280717876861065}
   - component: {fileID: 1290280717876861064}
+  - component: {fileID: 6689242605680027132}
   m_Layer: 0
   m_Name: Descript
   m_TagString: Untagged
@@ -25,14 +26,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290280717876861066}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.030015135, w: 0.99954945}
   m_LocalPosition: {x: 0, y: 0, z: -0.25009516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1290280719467236433}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.44}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0288, y: -0.7978}
@@ -172,6 +173,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1290280717876861065}
   m_maskType: 0
+--- !u!210 &6689242605680027132
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290280717876861066}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1290280719275788313
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +195,7 @@ GameObject:
   - component: {fileID: 1290280719275788318}
   - component: {fileID: 1290280719275788316}
   - component: {fileID: 1290280719275788319}
+  - component: {fileID: 7469598414170582889}
   m_Layer: 0
   m_Name: Name
   m_TagString: Untagged
@@ -197,14 +210,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290280719275788313}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.02338527, w: 0.99972653}
   m_LocalPosition: {x: 0, y: 0, z: -0.029608142}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1290280719467236433}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.68}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0288, y: 1.303}
@@ -344,6 +357,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1290280719275788316}
   m_maskType: 0
+--- !u!210 &7469598414170582889
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290280719275788313}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1290280719311869839
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +553,7 @@ GameObject:
   - component: {fileID: 1290280719467236436}
   - component: {fileID: 1290280719467236439}
   - component: {fileID: 1290280719467236438}
+  - component: {fileID: 5392962295480178200}
   m_Layer: 6
   m_Name: Card
   m_TagString: Untagged
@@ -661,7 +686,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a6212f55cde98479abacf3f06d83fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  template: {fileID: 11400000, guid: 362d7b6df72b1ba4db9ae015d148404a, type: 2}
   nameText: {fileID: 1290280719275788319}
   descText: {fileID: 1290280717876861064}
   damageText: {fileID: 1290280719311869837}
+  template: {fileID: 11400000, guid: 362d7b6df72b1ba4db9ae015d148404a, type: 2}
+--- !u!114 &5392962295480178200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290280719467236432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7dc7941af8ac8b45911d1bc5ff09a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: {fileID: 1290280719311869842}
+  _nameText: {fileID: 1290280719275788316}
+  _descName: {fileID: 1290280717876861065}
+  _nameS: {fileID: 7469598414170582889}
+  _descS: {fileID: 6689242605680027132}

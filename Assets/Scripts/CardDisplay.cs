@@ -7,7 +7,6 @@ using UnityEngine.Serialization;
 
 public class CardDisplay : MonoBehaviour
 {
-    [SerializeField] private CardTemplate template;
     [SerializeField] private TextMeshPro nameText;
     [SerializeField] private TextMeshPro descText;
     [SerializeField] private TextMeshPro damageText;
@@ -17,6 +16,7 @@ public class CardDisplay : MonoBehaviour
 
     // Знаю, что так делать очень плохо, но времени мало
     public CardTemplate GetTemplate() => template;
+    public CardTemplate template;
 
     private void OnEnable()
     {

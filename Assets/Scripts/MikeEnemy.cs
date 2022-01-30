@@ -66,8 +66,8 @@ public class MikeEnemy : Enemy
     {
         _isAlive = false;
         Debug.Log(this + " умер...");
-        var a = GetComponent<SpriteRenderer>();
-        a.color = Color.red;
+        GetComponent<SpriteRenderer>().enabled = false;
+        healthBar.Disable();
     }
 
     public override void Change()

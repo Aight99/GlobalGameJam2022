@@ -27,7 +27,6 @@ public class ToxicCard : Card
 
     private void OnMouseDown()
     {
-        Debug.Log("}e]]e]e]e]e]");
         _battleManager.PlayerCard = this;
     }
     
@@ -39,7 +38,6 @@ public class ToxicCard : Card
     
     public override Command Use()
     {
-        Debug.Log("А в том ли порядке???");
         return new Command(_damage, _template.disasterPoints, _template.isHaveTarget, _template.isWorldSwap,
             _template.isTakeCards);
     }
