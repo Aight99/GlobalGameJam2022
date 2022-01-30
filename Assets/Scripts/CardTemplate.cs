@@ -15,4 +15,7 @@ public class CardTemplate : ScriptableObject
     public bool isHaveTarget; // Else - AoE
     public bool isWorldSwap;
     public bool isTakeCards;
+    public Sprite punkSprite;
+    public Sprite naturalSprite;
+    public Sprite specialSprite;
 }

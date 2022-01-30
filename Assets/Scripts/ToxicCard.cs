@@ -27,6 +27,7 @@ public class ToxicCard : Card
 
     private void OnMouseDown()
     {
+        Debug.Log("}e]]e]e]e]e]");
         _battleManager.PlayerCard = this;
     }
     

@@ -5,12 +5,16 @@ using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Enemy))] 
+[RequireComponent(typeof(SpriteRenderer))] 
 [RequireComponent(typeof(BoxCollider2D))] // Maybe something else is will be better
 public class MikeEnemy : Enemy
 {
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Sprite punkSprite;
+    [SerializeField] private Sprite naturalSprite;
     private BattleManager _battleManager;
-    private bool isAlive = true;
+    private SpriteRenderer _spriteRenderer;
+    private bool _isAlive = true;
 
     private Command[] _moves = new Command[]
     {
@@ -33,6 +37,7 @@ public class MikeEnemy : Enemy
     private void OnEnable()
     {
         _battleManager = FindObjectOfType<BattleManager>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         StateOfWorld.OnWorldSwaped += Change;
         Health = MaxHealth;
         UpdateHp();
@@ -43,7 +48,7 @@ public class MikeEnemy : Enemy
         StateOfWorld.OnWorldSwaped -= Change;
     }
 
-    public override bool IsAlive() => isAlive;
+    public override bool IsAlive() => _isAlive;
 
     public override Command Act() => _moves[Random.Range(0, 3)];
 
@@ -59,7 +64,7 @@ public class MikeEnemy : Enemy
 
     public override void Die()
     {
-        isAlive = false;
+        _isAlive = false;
         Debug.Log(this + " умер...");
         var a = GetComponent<SpriteRenderer>();
         a.color = Color.red;
@@ -67,7 +72,13 @@ public class MikeEnemy : Enemy
 
     public override void Change()
     {
-        // Implementation
-        // Debug.Log(this + " на месте!");
+        if (_spriteRenderer.sprite == punkSprite)
+        {
+            _spriteRenderer.sprite = naturalSprite;
+        }
+        else
+        {
+            _spriteRenderer.sprite = punkSprite;
+        }
     }
 }

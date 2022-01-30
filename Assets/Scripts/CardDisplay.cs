@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CardDisplay : MonoBehaviour
 {
     [SerializeField] private CardTemplate template;
     [SerializeField] private TextMeshPro nameText;
+    [SerializeField] private TextMeshPro descText;
+    [SerializeField] private TextMeshPro damageText;
+
     private SpriteRenderer _sprite;
     private Types _type;
 
@@ -23,23 +27,27 @@ public class CardDisplay : MonoBehaviour
 
     private void SetTypeVisual()
     {
+        damageText.text = template.damage.ToString();
         switch (_type)
         {
             case Types.Natural:
             {
-                _sprite.color = Color.green;
+                descText.text = template.naturalDescription;
+                _sprite.sprite = template.naturalSprite;
                 nameText.text = template.naturalName;
                 break;
             }
             case Types.SteamPunk:
             {
-                _sprite.color = Color.yellow;
+                descText.text = template.punkDescription;
+                _sprite.sprite = template.punkSprite;
                 nameText.text = template.punkName;
                 break;
             }
             case Types.Special:
             {
-                _sprite.color = Color.blue;
+                descText.text = template.naturalDescription;
+                _sprite.sprite = template.specialSprite;
                 nameText.text = template.naturalName;
                 break;
             }

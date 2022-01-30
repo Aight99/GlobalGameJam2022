@@ -32,8 +32,7 @@ public class Player : MonoBehaviour, ICreature
     
     public void Change()
     {
-        // Implementation
-        // Debug.Log(this + " на месте!");
+        // void
     }
 
     public void TakeDamage(int damage)
